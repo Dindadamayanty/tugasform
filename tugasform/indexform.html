@@ -1,0 +1,229 @@
+<!DOCTYPE php>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form data pelamar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style type="text/css">
+        body {
+            font-family: 'Noto Sans' ;
+            background-color: #DBDDDD ;
+            margin: 0;
+            
+        }
+        h1 {
+            position: relative;
+            margin: auto;
+            font-size: 2rem;
+            height: 50;
+            letter-spacing: 5px;
+            background-color: #A3B7BF;
+            padding: 10px;
+            width: 100%; 
+            color: rgb(42, 45, 46);
+        }
+        form{
+            width: 100%;
+            margin: auto;
+            margin-top: 50;
+            max-width: 800px;
+        }
+        fieldset{
+            background-color: #A3B7BF;
+            border-radius: 16px;
+            border: none;
+            text-align: center;
+            
+        }
+        legend{
+            font-size: 1.8rem;
+            font-weight: bold;
+            /* background-color: #668693;
+            border-radius: 16px; */
+            padding: 10px;
+        }
+        table {
+            border-collapse: separate;
+            border-spacing: .5rem;
+            width: 90%;
+            margin: 30px auto;
+        }
+        .tabelbox tr td {
+            width: 50%;
+
+        }
+        input[type="text"] , input[type="date"] , select , textarea {
+            width: 100%;
+            border: none;
+            height: 58px;
+            border-radius: 26px;
+            padding: 1rem;
+            outline: none;
+            background-color: #DBDDDD;
+            font-size: 1.2rem;
+        }
+        .tabelbox tr td:nth-child(1){
+            text-align: right;
+            font-size: 1.2rem;
+            color: #0B1011;
+            width: 30%;
+            /* background-color: #668693; */
+            border-radius: 26px 0 0 26px;
+            padding: 1rem;
+            font-weight: bold;
+
+        }
+    input[type="submit"]
+    {
+        border: none;
+            height: 70px;
+            border-radius: 30px;
+            padding: 1rem;
+            outline: none;
+            background-color: #668693;
+            font-size: 2rem;
+            width: 30vh;
+            color: white;
+            letter-spacing: 7px;
+            text-transform: uppercase;
+            font-weight: bold;
+    }
+    input[type="submit"]:hover {
+        background-color: #0B1011;
+    }
+    </style>
+</head>
+<body>
+    <h1>DATA PELAMAR</h1>
+    <form action="hasil.php" method="post">
+        <fieldset>
+            <legend>Biodata Diri</legend>
+            <table class="tabelbox">
+                <tr>
+                    <td>NIK</td>
+                    <td><input type="text" name="NIK"></td>
+                </tr>
+                <tr>
+                    <td>Nama Siswa</td>
+                    <td><input type="text" name="studentname" placeholder="Nama Sesuai KTP"></td>
+                </tr>
+                <tr>
+                    <td >Alamat</td>
+                     <td><textarea placeholder="Alamat Sesuai KTP" name="alamat" style="resize: none; height: 60px; "></textarea></td> 
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>
+                        <input type="radio" name="JK" value="Laki-laki">Laki-laki
+                        <input type="radio" name="JK" value="Perempuan">Perempuan
+                    </td>
+                </tr>
+                <tr>
+                    <td>No Hp</td>
+                    <td><input type="text" name="nohp"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="text" name="email"></td>
+                </tr>
+                <tr>
+                    <td>Tempat Lahir</td>
+                    <td><input type="text" name="tempatlahir"></td>
+                </tr>
+                <tr>
+                    <td>Tanggal Lahir</td>
+                    <td><input type="date" name="tanggallahir"></td>
+                </tr>
+                <tr>
+                    <td>Usia</td>
+                    <td><input type="text" name="usia"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Pendidikan</legend>
+            <table class="tabelbox">
+                <tr>
+                    <td>Jenjang Pendidikan</td>
+                    <td>
+                        <select name="pendidikan">
+                            <option value=""></option>
+                            <option value="SMA" >SMA</option>
+                            <option value="D3">D3</option>
+                            <option value="D4/S1">D4/S1</option>
+                            <option value="S2">S2</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Universitas</td>
+                    <td><input type="text" name="universitas"></td>
+                </tr>
+                <tr>
+                    <td>Jurusan</td>
+                    <td><input type="text" name="jurusan"></td>
+                </tr>
+                <tr>
+                    <td>IPK</td>
+                    <td><input type="text" name="IPK"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Pengalaman Kerja I</legend>
+            <table class="tabelbox">
+                <tr>
+                    <td>Nama Perusahaan</td>
+                    <td><input type="text" name="namaperusahaan1"></td>
+                </tr>
+                <tr>
+                    <td>Jabatan terakhir</td>
+                    <td><input type="text" name="jabatanterakhir1"></td>
+                </tr>
+                <tr>
+                    <td>Tahun Bekerja</td>
+                    <td><input type="text" name="tahunbekerja1"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Pengalaman Kerja II</legend>
+            <table class="tabelbox">
+                <tr>
+                    <td>Nama Perusahaan</td>
+                    <td><input type="text" name="namaperusahaan2"></td>
+                </tr>
+                <tr>
+                    <td>Jabatan terakhir</td>
+                    <td><input type="text" name="jabatanterakhir2"></td>
+                </tr>
+                <tr>
+                    <td>Tahun Bekerja</td>
+                    <td><input type="text" name="tahunbekerja2"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <table class="tabelbox">
+                <tr>
+                    <td>Posisi yang di lamar</td>
+                    <td><input type="text" name="posisi"></td>
+                </tr>
+            </table>
+        </fieldset>
+    
+        <fieldset>
+            <table class="tabelbox">
+                <tr>
+                    <td><input type="submit" name="kirim" value="submit"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>
